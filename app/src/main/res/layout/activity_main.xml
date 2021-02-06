@@ -7,10 +7,12 @@
     tools:context=".view.MainActivity">
 
     <fragment
-        android:id="@+id/main_fragment"
-        android:name="com.example.android.mvvmapp.view.MainFragment"
+        android:id="@+id/main_nav_host"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        app:navGraph="@navigation/navi_graph"
+        app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
