@@ -24,3 +24,49 @@ GradleはJava環境におけるビルドシステムのことで、パッケー�
 ```
 apply plugin: 'kotlin-kapt'
 ```
+
+  
+## AndroidのBackキーを無効にする
+方法は下記3通り
+1. dispatchKeyEventを使用してBackキーのハンドリングを行う
+2. onBackPressedを使用する
+3. callbackを利用して無効化する  
+  
+
+1.dispatchKeyEventを使用してBackキーのハンドリングを行う
+ →dispatchKeyEventでBackキー押下時にreturn trueを返すことで実装できる。
+
+ ```Java
+ @Override
+public boolean dispatchKeyEvent(KeyEvent) {
+    if (event.getAction() == KeyEvent.ACTION_DOWN) {
+        switch (event.getKeyCode()) {
+            // Backキーの押下時の処理
+            case KeyEvent.KEYCODE_BACK:
+                // ダイアログ表示等の処理を行いたい場合はここに記述
+                // 親クラスのdispatchKeyEvent()を呼び出さずにtrueを返すことで、
+                // Backキーを無効にする
+                return true;
+        }
+    }
+    return super.dispatchKeyEvent(event);
+}
+ ```
+
+2.onBackPressedを使用する
+ →`Activity#onBackPressed()`の中を空にすることで戻るキーが無効化される。 
+
+ ```kotlin
+ override fun onBackPressed() {
+     //中身を空にすることで戻るキーが無効化される。
+ }
+ ```
+
+3.callbackを利用して無効化する。
+
+ ```kotlin
+ val callback = requireActivity().onBackPressedDispatcher.addCallback(this) {
+     // 
+ }
+ ```
+ ・FragmentでのBackKeyの無効化方法
