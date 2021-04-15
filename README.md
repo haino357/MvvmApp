@@ -104,3 +104,8 @@ xmlで現在日時の表示する
 
 参考サイト
 - [Android TextClock:デジタル時計を表示する](https://www.programing-style.com/android/android-api/textclock/)
+
+## YouTubeAPI
+AndroidアプリでYouTubeを利用する場合使用する。  
+### [YouTubePlayerFragment](https://developers.google.com/youtube/android/player/reference/com/google/android/youtube/player/YouTubePlayerFragment?hl=ja)
+基本的には上記の`YouTubePlayerFragment`を利用することが多そう。
