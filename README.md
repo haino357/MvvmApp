@@ -84,3 +84,23 @@ public boolean dispatchKeyEvent(KeyEvent) {
 
  ## Single Activity
 ひとつのActivityのライフサイクル内でFragmentを活用して画面を作る。
+
+## レイアウト
+xmlで現在日時の表示する  
+`TextClock`タグを利用する。
+```xml
+<TextClock
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:textSize="60sp"
+    android:timeZone="Asia/Tokyo"
+    android:format24Hour="yyyy/MM/dd HH:mm:ss"
+    android:format12Hour="yyyy/MM/dd HH:mm:ss" />
+```
+`android:timeZone="Asia/Tokyo"`：タイムゾーンを設定する
+`android:format24Hour="HH:mm:ss"`24時間形式で表示する
+`android:format12Hour="HH:mm:ss"`12時間形式で表示する
+
+参考サイト
+- [Android TextClock:デジタル時計を表示する](https://www.programing-style.com/android/android-api/textclock/)
