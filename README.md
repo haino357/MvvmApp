@@ -24,6 +24,17 @@ GradleはJava環境におけるビルドシステムのことで、パッケー�
 ```
 apply plugin: 'kotlin-kapt'
 ```
+### Moshi
+MoshiはSquare社が開発した軽量なJsonパーサーライブラリ。Json形式のデータを読み込んで、Java Objectに変換してくれる。
+これがないとアプリ側でAPIで叩いてきた結果を扱うことが困難になる。
+類似ライブラリに`Gson`がある。
+```
+// moshi
+def moshi_version = "1.11.0"
+implementation "com.squareup.moshi:moshi:$moshi_version"
+implementation "com.squareup.moshi:moshi-kotlin:$moshi_version""
+```
+[Moshiドキュメント](https://github.com/square/moshi)
 
   
 ## AndroidのBackキーを無効にする
