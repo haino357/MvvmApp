@@ -81,3 +81,6 @@ public boolean dispatchKeyEvent(KeyEvent) {
  }
  ```
  ・FragmentでのBackKeyの無効化方法
+
+ ## Single Activity
+ひとつのActivityのライフサイクル内でFragmentを活用して画面を作る。
