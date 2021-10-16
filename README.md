@@ -19,6 +19,13 @@
 
 ## Gradle
 GradleはJava環境におけるビルドシステムのことで、パッケージの導入やバージョン管理の際に用いる。
+- Windows版AndroidStudioで説明を記載
+  - File>Project Structureを押下する(Ctrl+Alt+Shift+s)ことで開かれる`Project Structure`で`Project`を押下すると下記が表示される。
+  - 下記から必要なバージョンに変更する  
+<img src="Picture/Project%20Structure設定画面.png" width="600">
+  
+- 変更後は`build.gradle`が指定のバージョンに変更される
+
 ### Kapt
 `Kapt`と呼ばれるプラグイン。`kotlin-annotation-processing tools`の略でアノテーション(先頭が@ではじまるもの)を使ってコードを自動生成できるようになる。Androidでは下記を`build.gradle`に追加することで使用できる。
 ```
