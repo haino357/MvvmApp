@@ -1,4 +1,4 @@
 # 更新履歴詳細記録
 ## 2021/10/17(日)
-- Gradleのバージョンの変更方法をREADME.mdの`Gradle`の項目で記載
-- 
+- Gradleのバージョンの変更方法をREADME.mdの`Gradle`の項目で記載。
+- Gradleのバージョンの変更に伴うプロジェクト管理ファイル`.idea`の変更について。詳細はREADME.mdに記載。 

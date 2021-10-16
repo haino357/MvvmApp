@@ -116,3 +116,13 @@ xmlで現在日時の表示する
 AndroidアプリでYouTubeを利用する場合使用する。  
 ### [YouTubePlayerFragment](https://developers.google.com/youtube/android/player/reference/com/google/android/youtube/player/YouTubePlayerFragment?hl=ja)
 基本的には上記の`YouTubePlayerFragment`を利用することが多そう。
+
+## プロジェクト管理ファイル
+Gradleのバージョン変更に伴い`.idea`ファイル内の変更点
+- compiler.xml
+- gradle.xml
+- misc.xml
+- vcs.xml
+- codeStyleConfig.xml
+- Project.xml
+- Project_Default.xml
