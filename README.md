@@ -1,5 +1,11 @@
 # MVVMアーキテクチャ学習用Repository
 
+## 現在の環境設定
+- Android Studio Arctic Fox | 2020.3.1
+- Android Gradle plugin Version:7.0.3
+- Gradle Version:7.0.2
+- Kotlin Version:1.4.20
+
 ## 学習中
 - Android Architecture Components
 - LiveData
