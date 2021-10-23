@@ -25,12 +25,39 @@
 
 ## Gradle
 GradleはJava環境におけるビルドシステムのことで、パッケージの導入やバージョン管理の際に用いる。
+- Gradleの利用可能なバージョンの確認は右記URL：https://services.gradle.org/distributions/
 - Windows版AndroidStudioで説明を記載
   - File>Project Structureを押下する(Ctrl+Alt+Shift+s)ことで開かれる`Project Structure`で`Project`を押下すると下記が表示される。
   - 下記から必要なバージョンに変更する  
 <img src="Picture/Project%20Structure設定画面.png" width="600">
   
 - 変更後は`build.gradle`が指定のバージョンに変更される
+- `gradle/wrapper/gradle-wrapper.properties`の`distributionUrl`を変更して、新しいバージョンが利用可能。
+  - この変更は上記のGUI操作で自動的に変更される。
+```
+#Fri Jan 22 23:02:55 JST 2021
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-7.0.2-bin.zip
+```
+### [Android Plugin for Gradle](https://developer.android.com/studio/releases/gradle-plugin.html)
+GradleのPluginとして実装されているもの。トップレベルのbuild.gradleに利用するバージョンが書かれている。
+```
+buildscript {
+    repositories {
+        // Gradle 4.1 and higher include support for Google's Maven repo using
+        // the google() method. And you need to include this repo to download
+        // Android Gradle plugin 3.0.0 or higher.
+        google()
+        ...
+    }
+    dependencies {
+        classpath("com.android.tools.build:gradle:4.2.0")
+    }
+}
+```
 
 ### Kapt
 `Kapt`と呼ばれるプラグイン。`kotlin-annotation-processing tools`の略でアノテーション(先頭が@ではじまるもの)を使ってコードを自動生成できるようになる。Androidでは下記を`build.gradle`に追加することで使用できる。
@@ -131,4 +158,4 @@ Gradleのバージョン変更に伴い`.idea`ファイル内の変更点
 - vcs.xml
 - codeStyleConfig.xml
 - Project.xml
-- Project_Default.xml
+- Project_Default.xml 
